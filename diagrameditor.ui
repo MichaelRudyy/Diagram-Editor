@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DiagramEditor</class>
+ <widget class="QMainWindow" name="DiagramEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>858</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DiagramEditor</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGraphicsView" name="Diag_View">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>601</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>10</y>
+      <width>221</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QGroupBox" name="Edit_Diagram_Group">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>240</y>
+        <width>221</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Редагування</string>
+      </property>
+      <widget class="QPushButton" name="Edit_b">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>161</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Змінити</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Delete_b">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>201</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::PreventContextMenu</enum>
+       </property>
+       <property name="toolTipDuration">
+        <number>4</number>
+       </property>
+       <property name="text">
+        <string>Видалити</string>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>312</number>
+       </property>
+       <property name="autoRepeatInterval">
+        <number>95</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Save_b">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>30</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>save.ico</normaloff>save.ico</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Open_b">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>70</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>open.ico</normaloff>open.ico</iconset>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Add_Diagram_Group">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Види Діграм</string>
+      </property>
+      <widget class="QPushButton" name="Columnar_b">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Стовпчасті</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Circle_b">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Кругові</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Linear_b">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Лінійні</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Linear_vs_b">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Лінійні-Порівняння</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Columnar_Page">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Стовпчасті</string>
+      </property>
+      <widget class="QPushButton" name="OK_1_b">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>360</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="Columnar_Table">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>Назва</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Значення</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Колір</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>201</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Додати</string>
+        </attribute>
+        <widget class="QStackedWidget" name="stackedWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>201</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="Page_Add_Columan_Value">
+          <widget class="QPushButton" name="Add_Columnar">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>111</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Додати</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>47</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Назва</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="Columnar_name">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>10</y>
+             <width>121</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>47</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Значення</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="Columnar_value">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>40</y>
+             <width>121</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Columnar_color">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>70</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Колір</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Page_Add_Columnar_color">
+          <widget class="QPushButton" name="Back_b_1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>21</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>&lt;</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Green_color_Columnar">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Зелений</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Blue_color_Columnar">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>30</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Синій</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Red_color_Columnar">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>50</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Червноний</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Grey_color_Columnar">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>70</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Сірий</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Видалити</string>
+        </attribute>
+        <widget class="QSpinBox" name="Columnar_delete_number">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>111</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Номер</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Columnar_delete">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Видалити</string>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>295</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Columnar_1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>171</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>Заміна</string>
+        </attribute>
+        <widget class="QSpinBox" name="Columnar_Swap_numb1">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>10</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Columnar_Swap_numb2">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>40</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти місця ячейки</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Columnar_Swap_b">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>181</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Columnar_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>42</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_13">
+        <attribute name="title">
+         <string>Сортування</string>
+        </attribute>
+        <widget class="QPushButton" name="Columnar_sort1_b">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>10</y>
+           <width>181</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Сортування за значенням</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Columnar_return_old_b">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Повернути старі данні</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Circle_Page">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Кругові</string>
+      </property>
+      <widget class="QPushButton" name="OK_1_b_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>360</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="Circle_Table">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>Назва</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Значення</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Колір</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>201</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_9">
+        <attribute name="title">
+         <string>Додати</string>
+        </attribute>
+        <widget class="QStackedWidget" name="stackedWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>201</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="Page_Add_Circle_Value">
+          <widget class="QPushButton" name="Add_Circle">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>111</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Додати</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_13">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>47</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Назва</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="Circle_name">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>10</y>
+             <width>121</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_14">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>47</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Значення</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="Circle_value">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>40</y>
+             <width>121</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="Circle_color">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>70</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Колір</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Page_Add_Circle_color">
+          <widget class="QPushButton" name="Back_b_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>21</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>&lt;</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Green_color_Circle">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>10</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Зелений</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Blue_color_Circle">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>30</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Синій</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Red_color_Circle">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>50</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Червноний</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="Grey_color_Circle">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>70</y>
+             <width>84</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Сірий</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_10">
+        <attribute name="title">
+         <string>Видалити</string>
+        </attribute>
+        <widget class="QSpinBox" name="Circle_delete_number">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>111</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Номер</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Circle_delete">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Видалити</string>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>295</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Circle_1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>171</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>Заміна</string>
+        </attribute>
+        <widget class="QSpinBox" name="Circle_Swap_numb1">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>10</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти місця ячейки</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Circle_Swap_numb2">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>40</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Circle_Swap_b_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>181</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Circle_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Linear_Page">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Лінійні</string>
+      </property>
+      <widget class="QPushButton" name="OK_1_b_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>360</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="Linear_Table">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>Назва</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Значення</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>201</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_7">
+        <attribute name="title">
+         <string>Додати</string>
+        </attribute>
+        <widget class="QLineEdit" name="Linear_name">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Назва</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Значення</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Add_Linear">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>181</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Додати</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Linear_value">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>40</y>
+           <width>121</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_8">
+        <attribute name="title">
+         <string>Видалити</string>
+        </attribute>
+        <widget class="QSpinBox" name="Linear_delete_number">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>121</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Номер</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Linear_delete">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Видалити</string>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>295</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Linear_1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>171</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>Заміна</string>
+        </attribute>
+        <widget class="QSpinBox" name="Linear_Swap_numb1">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>10</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти місця ячейки</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Linear_Swap_numb2">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>40</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Linear_Swap_b">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>181</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Linear_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Linear_vs_Page">
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Лінійні Порівняння</string>
+      </property>
+      <widget class="QPushButton" name="OK_1_b_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>360</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="Linear_vs_Table">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>Назва</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Значення</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Знач_2</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>201</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_11">
+        <attribute name="title">
+         <string>Додати</string>
+        </attribute>
+        <widget class="QLineEdit" name="Linear_vs_name">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Значення</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Add_Linear_vs">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>181</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Додати</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Linear_vs_value1">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>40</y>
+           <width>61</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Linear_vs_value">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>40</y>
+           <width>61</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Назва</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_12">
+        <attribute name="title">
+         <string>Видалити</string>
+        </attribute>
+        <widget class="QSpinBox" name="Linear_vs_delete_number">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>10</y>
+           <width>111</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Номер</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Linear_vs_delete">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Видалити</string>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>295</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Linear_vs_1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>171</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_6">
+        <attribute name="title">
+         <string>Заміна</string>
+        </attribute>
+        <widget class="QSpinBox" name="Linear_vs_Swap_numb1">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>10</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти місця ячейки</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Linear_vs_Swap_numb2">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>40</y>
+           <width>41</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Linear_vs_Swap_b">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>181</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поміняти</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ALERT_Linear_vs_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>47</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>858</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
